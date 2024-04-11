@@ -1,13 +1,9 @@
 'use client'
 import React from 'react';
-import styled from "styled-components";
+import * as P from '../styles/Paragraph.styles'
 
 export default function Header() {
     return (
-        <Title>oi eu sou um header</Title>
+        <P.Wrapper>oi eu sou um header</P.Wrapper>
     );
 }
-
-const Title = styled.h1`
-    color: red;
-`
