@@ -1,15 +1,16 @@
 'use client'
 import Image from "next/image";
 import styles from "./page.module.css";
-import Header from '../components/Header'
+import Header from '../components/header/Header'
 import {ThemeProvider} from "styled-components";
 import {light} from "@/styles/theme";
+import GlobalStyles from "@/styles/globalStyles";
+import Footer from "@/components/footer/Footer";
 
 export default function Home() {
     return (
         <ThemeProvider theme={light}>
-            <main className={styles.main}>
-                <Header/>
+                <Header />
                 <div className={styles.description}>
                     <p>
                         Get started by editing&nbsp;
@@ -96,7 +97,8 @@ export default function Home() {
                         </p>
                     </a>
                 </div>
-            </main>
+            <Footer/>
+            <GlobalStyles/>
         </ThemeProvider>
     );
 }
